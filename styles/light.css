@@ -3,6 +3,33 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light {
+  --accent-color: #FF0070;
+  --background-color: #FFF1F7;
+  --title-text-color: #FFC2E6;
+  --header-description-text-color: #353430;
+  --box-color: #FF8DCB;
+  --header-menu-color: #353430;
+  --header-menu-color-transparent: rgb(53 52 48 / 0.6);
+  --header-background: url('../images/cover-image-light.png');
+  --rec-display: none;
+  --main-text-color: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+:root {
+  --accent-color: #FF0070;
+  --background-color: #FFF1F7;
+  --title-text-color: #FFC2E6;
+  --header-description-text-color: #353430;
+  --box-color: #FF8DCB;
+  --header-menu-color: #353430;
+  --header-menu-color-transparent: rgb(53 52 48 / 0.6);
+  --header-background: url('../images/cover-image-light.png');
+  --rec-display: none;
+  --main-text-color: #353430;
+}
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.

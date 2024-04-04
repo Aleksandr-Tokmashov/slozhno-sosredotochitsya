@@ -41,30 +41,9 @@
   bottom: 20px;
 }
 
-.decorated-zone-f::before {
-  position: absolute;
-  content: '';
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--header-menu-color);
-  border-inline-end: 1px solid var(--header-menu-color);
-  right: 20px;
-  top: 20px;
-}
-
-.decorated-zone-f::after {
-  position: absolute;
-  content: '';
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: 1px solid var(--header-menu-color);
-  border-inline-start: 1px solid var(--header-menu-color);
-  left: 20px;
-  bottom: 20px;
-}
-
 .header__theme-menu-list {
-  margin-inline-end: 20px;
+  margin-block-start: 20px;
+  margin-inline-start: 15px;
   display: flex;
   list-style: none;
   gap: 10px;
@@ -119,18 +98,8 @@
 }
 
 .header__description {
-  background-color: var(--box-color);
   justify-self: end;
   align-self: start;
-  color: var(--header-description-text-color);
-}
-
-.header__description-text {
-  font-family: 'IBM Plex Mono', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
-  margin: 0;
 }
 
 .header__rec {
@@ -174,6 +143,16 @@
   color: var(--main-text-color);
 }
 
+.text_in_box {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin: 0;
+  background-color: var(--box-color);
+  color: var(--header-description-text-color);
+}
+
 .main__h2 {
   font-family: inherit;
   font-size: inherit;
@@ -184,26 +163,8 @@
   margin-block: 0;
 }
 
-.main__h3 {
-  font-weight: 700;
-  background-color: var(--box-color);
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  text-align: inherit;
-  color: var(--header-description-text-color);
-  margin-block: 0;
-}
-
 .main__h4 {
-  font-family: inherit;
-  font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
-  text-align: inherit;
-  background-color: var(--box-color);
-  color: var(--header-description-text-color);
-  margin-block: 0;
 }
 
 .main__section {
@@ -275,11 +236,7 @@
   justify-content: center;
 }
 
-p {
-  margin-block: 0;
-}
-
-div p {
+.section__text {
   margin-block-start: 10px;
 }
 
@@ -311,14 +268,13 @@ div p {
   .header__theme-menu {
     justify-self: end;
     align-self: center;
-    position: relative;
-    top: 10px;
-    right: 0;
+    margin-block-start: 10px;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
     gap: 10px;
+    margin-inline-end: 20px;
   }
 
   .header {
@@ -337,8 +293,6 @@ div p {
     margin-block-start: 20px;
     gap: 20px;
     width: 100%;
-    grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: repeat(0.7fr, 3);
     grid-template-areas:
     "sunset sunset ice-cream"
     "tape books ice-cream"
@@ -412,6 +366,7 @@ div p {
   }
 
   .header__theme-menu-list {
+    margin-block-start: 5px;
     margin-inline-end: 10px;
   }
 
